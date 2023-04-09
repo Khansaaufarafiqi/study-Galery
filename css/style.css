@@ -5,9 +5,104 @@
 }
 body{
     font: 20px/40px 'font', 'arial narrow', 'sans-serif';
+    background-color: gray;
+    background-image: url(/img/Karma-Heavy\ Cavern.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.image li img{
+    width: 130px;
+    height: 130px;
 }
 h1{
     font-size: 70px;
-    margin: 35px 0;
+    margin: 25px ;
+    padding-bottom: 60px;
     text-align: center;
+    text-shadow: 1px 1px 1px white;
+}
+.container{
+    width: 600px;
+    height: 190px;
+    background-color: purple;
+    margin: 50px auto;
+    padding: 35px;
+    box-shadow: 0px 0px 13px 8px rgba(0, 0, 0, .5);
+    border-radius: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/img/HD\ wallpaper_\ Genshin\ Impact\,\ landscape\,\ minimalism\,\ teal\,\ fantasy\ city.jpg);
+}
+.image li {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 7px solid rgb(102, 21, 179);
+    float: left;
+    position: relative;
+    margin: 28px;
+}
+.image .wan,.hu,.chil{
+border-radius: 50%;
+
+}
+.clear{
+    clear: both;
+}
+.image li span{
+    display: block;
+    width: 130px;
+    height: 130px;
+    background-color: rgba(168, 57, 219, 0.322);
+    border-radius: 50% ;
+    position: absolute;
+    top: 0;
+    color: blueviolet;
+    text-align: center;
+    line-height: 150px;
+    text-shadow: 1.5px 1.5px 1px rgb(247, 102, 247);
+    opacity: 0;
+    transition: .2s;
+    transform: scale(0) rotate(0);
+}
+.image li a:hover span{
+    opacity: 5;
+    transform: scale(1) rotate(-360deg);
+}
+.image .hutao {
+    border: 7px solid red;
+}
+.image .childe {
+    border: 7px solid rgb(39, 42, 223);
+}
+.overlay{
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 99999;
+    transition: 1s;
+    
+}
+.overlay:target{
+    width: auto;
+    height: auto;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    text-align: center;
+    
+}
+.image .overlay img{
+    width: 600px;
+    height: 750px;
+    margin: 5%;
+    
+}
+.overlay img{
+    max-height: 100%;
 }
