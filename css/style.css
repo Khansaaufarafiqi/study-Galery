@@ -93,7 +93,7 @@ border-radius: 50%;
     height: auto;
     right: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .7);
     text-align: center;
     
 }
@@ -105,4 +105,42 @@ border-radius: 50%;
 }
 .overlay img{
     max-height: 100%;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, .8);
+}
+.overlay:target img{
+    animation: modul .5s;
+}
+
+
+
+@keyframes modul{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes tutup {
+    0%{
+        bottom:-200px;
+        left: 45%;  
+    }
+    100%{
+        bottom: -40px;
+        left: 45%;
+    }
+}
+.overlay .close .tombol{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: -40px;
+    left: 45%;
+    
+}
+.overlay:target .close .tombol{
+    animation: tutup 2s  forwards alternate ;
 }
