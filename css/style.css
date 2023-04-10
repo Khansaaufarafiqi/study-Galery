@@ -11,6 +11,10 @@ body{
     background-size: cover;
     
 }
+.BY{
+    color: white;
+    font-size: 30px;
+}
 .image li img{
     width: 130px;
     height: 130px;
@@ -20,7 +24,7 @@ h1{
     margin: 25px ;
     padding-bottom: 60px;
     text-align: center;
-    text-shadow: 1px 1px 1px white;
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
 }
 .container{
     width: 600px;
@@ -108,7 +112,7 @@ border-radius: 50%;
     box-shadow: 7px 7px 15px rgba(0, 0, 0, .8);
 }
 .overlay:target img{
-    animation: modul .5s;
+    animation: modul .7s;
 }
 
 
@@ -143,4 +147,29 @@ border-radius: 50%;
 }
 .overlay:target .close .tombol{
     animation: tutup 2s  forwards alternate ;
+}
+.next, .prev{
+    width:200px ;
+    height: 143px;
+    background-image: url(/img/long/kanan.png);
+    position: absolute;
+    text-indent: -999999px;
+    bottom: 42%;
+    margin-left: -120px;
+}
+.prev{
+    background-image: url(/img/long/kiri.png);
+    margin-left: -80px;
+}
+.overlay:target .next,
+.overlay:target .prev{
+    animation: navi 2s forwards;
+}
+@keyframes navi{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
 }
